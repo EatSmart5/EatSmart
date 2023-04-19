@@ -47,7 +47,8 @@ class _FeedsWidgetState extends State<FeedsWidget> {
           borderRadius: BorderRadius.circular(12),
           child: Column(children: [
             FancyShimmerImage(
-              imageUrl: 'https://i.ibb.co/F0s3FHQ/Apricots.png',
+              imageUrl:
+                  'https://www.cubesnjuliennes.com/wp-content/uploads/2020/08/Best-Indian-Punjabi-Samosa-Recipe.jpg',
               height: size.width * 0.21,
               width: size.width * 0.2,
               boxFit: BoxFit.fill,
@@ -75,14 +76,14 @@ class _FeedsWidgetState extends State<FeedsWidget> {
                   Flexible(
                     flex: 4,
                     child: PriceWidget(
-                      salePrice: 2.99,
-                      price: 5.9,
+                      salePrice: 20,
+                      price: 25,
                       textPrice: _quantityTextController.text,
                       isOnSale: true,
                     ),
                   ),
                   const SizedBox(
-                    width: 3,
+                    width: 0,
                   ),
                   Flexible(
                     child: Row(
@@ -91,15 +92,15 @@ class _FeedsWidgetState extends State<FeedsWidget> {
                           flex: 3,
                           child: FittedBox(
                             child: TextWidget(
-                              text: 'KG',
+                              text: 'PC',
                               color: color,
-                              textSize: 18,
+                              textSize: 20,
                               isTitle: true,
                             ),
                           ),
                         ),
                         const SizedBox(
-                          width: 5,
+                          width: 6,
                         ),
                         Flexible(
                             flex: 2,
@@ -139,7 +140,7 @@ class _FeedsWidgetState extends State<FeedsWidget> {
                 ),
                 style: ButtonStyle(
                     backgroundColor:
-                    MaterialStateProperty.all(Theme.of(context).cardColor),
+                        MaterialStateProperty.all(Theme.of(context).cardColor),
                     tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                       const RoundedRectangleBorder(
@@ -157,4 +158,3 @@ class _FeedsWidgetState extends State<FeedsWidget> {
     );
   }
 }
-

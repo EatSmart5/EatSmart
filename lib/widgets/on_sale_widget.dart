@@ -43,9 +43,10 @@ class _OnSaleWidgetState extends State<OnSaleWidget> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       FancyShimmerImage(
-                        imageUrl: 'https://ibb.co/rkJdY6k',
-                        height: size.width * 0.18,
-                        width: size.width * 0.18,
+                        imageUrl:
+                            'https://www.cubesnjuliennes.com/wp-content/uploads/2020/08/Best-Indian-Punjabi-Samosa-Recipe.jpg',
+                        height: size.width * 0.22,
+                        width: size.width * 0.22,
                         boxFit: BoxFit.fill,
                       ),
                       Column(
@@ -84,9 +85,9 @@ class _OnSaleWidgetState extends State<OnSaleWidget> {
                   ),
                   const SizedBox(height: 5),
                   TextWidget(
-                    text: 'Patis',
+                    text: 'Title',
                     color: color,
-                    textSize: 16,
+                    textSize: 20,
                     isTitle: true,
                   ),
                   const SizedBox(height: 5),
