@@ -71,8 +71,7 @@ class EmptyScreen extends StatelessWidget {
                       const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
                     ),
                     onPressed: () {
-                      GlobalMethods.navigateTo(
-                          ctx: context, routeName: FeedsScreen.routeName);
+
                     },
                     child: TextWidget(
                       text: buttonText,
