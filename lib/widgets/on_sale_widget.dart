@@ -35,22 +35,23 @@ class _OnSaleWidgetState extends State<OnSaleWidget> {
           },
           child: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+            child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 // mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       FancyShimmerImage(
-                        imageUrl: 'https://i.ibb.co/F0s3FHQ/Apricots.png',
-                        height: size.width * 0.22,
-                        width: size.width * 0.22,
+                        imageUrl: 'https://ibb.co/rkJdY6k',
+                        height: size.width * 0.18,
+                        width: size.width * 0.18,
                         boxFit: BoxFit.fill,
                       ),
                       Column(
                         children: [
                           TextWidget(
-                            text: '1KG',
+                            text: '1PC',
                             color: color,
                             textSize: 22,
                             isTitle: true,
@@ -76,14 +77,14 @@ class _OnSaleWidgetState extends State<OnSaleWidget> {
                     ],
                   ),
                   const PriceWidget(
-                    salePrice: 2.99,
-                    price: 5.9,
+                    salePrice: 15,
+                    price: 20,
                     textPrice: '1',
                     isOnSale: true,
                   ),
                   const SizedBox(height: 5),
                   TextWidget(
-                    text: 'Product title',
+                    text: 'Patis',
                     color: color,
                     textSize: 16,
                     isTitle: true,
