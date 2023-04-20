@@ -20,7 +20,7 @@ class CartScreen extends StatelessWidget {
             title: 'Building Cart',
             subtitle: 'Cart is under construction',
             buttonText: 'Try again',
-            imagePath: 'assets/images/cart.png',
+            imagePath: 'assets/images/UserScreen.png',
           )
         : Scaffold(
             appBar: AppBar(
