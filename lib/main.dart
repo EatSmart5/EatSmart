@@ -33,7 +33,7 @@ class _MyAppState extends State<MyApp> {
 
   void getCurrentAppTheme() async {
     themeChangeProvider.setDarkTheme =
-    await themeChangeProvider.darkThemePrefs.getTheme();
+        await themeChangeProvider.darkThemePrefs.getTheme();
   }
 
   @override
@@ -51,7 +51,7 @@ class _MyAppState extends State<MyApp> {
         })
       ],
       child:
-      Consumer<DarkThemeProvider>(builder: (context, themeProvider, child) {
+          Consumer<DarkThemeProvider>(builder: (context, themeProvider, child) {
         return MaterialApp(
             debugShowCheckedModeBanner: false,
             title: 'Flutter Demo',
@@ -64,10 +64,11 @@ class _MyAppState extends State<MyApp> {
               WishlistScreen.routeName: (ctx) => const WishlistScreen(),
               OrdersScreen.routeName: (ctx) => const OrdersScreen(),
               ViewedRecentlyScreen.routeName: (ctx) =>
-              const ViewedRecentlyScreen(),
+                  const ViewedRecentlyScreen(),
               RegisterScreen.routeName: (ctx) => const RegisterScreen(),
               LoginScreen.routeName: (ctx) => const LoginScreen(),
-              ForgetPasswordScreen.routeName: (ctx) => const ForgetPasswordScreen(),
+              ForgetPasswordScreen.routeName: (ctx) =>
+                  const ForgetPasswordScreen(),
             });
       }),
     );
