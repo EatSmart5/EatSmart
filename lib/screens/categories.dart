@@ -21,15 +21,15 @@ class CategoriesScreen extends StatelessWidget {
       'catText': 'Meal',
     },
     {
-      'imgPath': '',
+      'imgPath': 'assets/images/cat/snacks.png',
       'catText': 'Snacks',
     },
     {
-      'imgPath': '',
+      'imgPath': 'assets/images/cat/beverages2.png',
       'catText': 'Beverages',
     },
     {
-      'imgPath': '',
+      'imgPath': 'assets/images/cat/pakaged_items.png',
       'catText': 'Packaged Items',
     },
   ];

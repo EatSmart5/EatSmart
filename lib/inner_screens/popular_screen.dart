@@ -7,9 +7,9 @@ import 'package:grocery/widgets/price_widget.dart';
 import '../services/utils.dart';
 import '../widgets/back_widget.dart';
 
-class OnSaleScreen extends StatelessWidget {
+class PopularScreen extends StatelessWidget {
   static const routeName = "/OnSaleScreen";
-  const OnSaleScreen({Key? key}) : super(key: key);
+  const PopularScreen({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     bool _isEmpty = false;
@@ -21,7 +21,7 @@ class OnSaleScreen extends StatelessWidget {
         elevation: 0,
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         title: TextWidget(
-          text: 'Products on sale',
+          text: 'Our Popular Products',
           color: color,
           textSize: 24.0,
           isTitle: true,
@@ -29,37 +29,37 @@ class OnSaleScreen extends StatelessWidget {
       ),
       body: _isEmpty
           ? Center(
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(18.0),
-                child: Image.asset(
-                  'assets/images/box.png',
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(18.0),
+                      child: Image.asset(
+                        'assets/images/box.png',
+                      ),
+                    ),
+                    Text(
+                      'No products on sale yet!,\nStay tuned',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          color: color,
+                          fontSize: 30,
+                          fontWeight: FontWeight.w700),
+                    ),
+                  ],
                 ),
               ),
-              Text(
-                'No products on sale yet!,\nStay tuned',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    color: color,
-                    fontSize: 30,
-                    fontWeight: FontWeight.w700),
-              ),
-            ],
-          ),
-        ),
-      )
+            )
           : GridView.count(
-        crossAxisCount: 2,
-        padding: EdgeInsets.zero,
-        // crossAxisSpacing: 10,
-        childAspectRatio: size.width / (size.height * 0.45),
-        children: List.generate(16, (index) {
-          return const OnSaleWidget();
-        }),
-      ),
+              crossAxisCount: 2,
+              padding: EdgeInsets.zero,
+              // crossAxisSpacing: 10,
+              childAspectRatio: size.width / (size.height * 0.45),
+              children: List.generate(16, (index) {
+                return const OnSaleWidget();
+              }),
+            ),
     );
   }
 }

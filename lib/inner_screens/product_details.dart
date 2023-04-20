@@ -50,8 +50,7 @@ class _ProductDetailsState extends State<ProductDetails> {
         Flexible(
           flex: 2,
           child: FancyShimmerImage(
-            imageUrl:
-                'https://www.cubesnjuliennes.com/wp-content/uploads/2020/08/Best-Indian-Punjabi-Samosa-Recipe.jpg',
+            imageUrl: 'https://i.ibb.co/NN6WR4k/productimg.png',
             boxFit: BoxFit.scaleDown,
             width: size.width,
             // height: screenHeight * .4,

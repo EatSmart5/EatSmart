@@ -56,13 +56,24 @@ class _HomeScreenState extends State<HomeScreen> {
             TextButton(
               onPressed: () {
                 GlobalMethods.navigateTo(
-                    ctx: context, routeName: OnSaleScreen.routeName);
+                    ctx: context, routeName: PopularScreen.routeName);
               },
-              child: TextWidget(
-                text: 'View all',
-                maxLines: 1,
-                color: Colors.blue,
-                textSize: 20,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  TextWidget(
+                    text: '  Bestseller',
+                    color: Colors.red,
+                    textSize: 22,
+                    isTitle: true,
+                  ),
+                  TextWidget(
+                    text: 'View all',
+                    maxLines: 1,
+                    color: Colors.blue,
+                    textSize: 20,
+                  ),
+                ],
               ),
             ),
             const SizedBox(
@@ -70,25 +81,25 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             Row(
               children: [
-                RotatedBox(
-                  quarterTurns: -1,
-                  child: Row(
-                    children: [
-                      TextWidget(
-                        text: '🔥Popular🔥'.toUpperCase(),
-                        color: Colors.red,
-                        textSize: 22,
-                        isTitle: true,
-                      ),
-                      const SizedBox(
-                        width: 5,
-                      ),
-                    ],
-                  ),
-                ),
-                const SizedBox(
-                  width: 8,
-                ),
+                // RotatedBox(
+                //   quarterTurns: -1,
+                //   child: Row(
+                //     children: [
+                //       TextWidget(
+                //         text: '🔥Popular🔥'.toUpperCase(),
+                //         color: Colors.red,
+                //         textSize: 22,
+                //         isTitle: true,
+                //       ),
+                //       const SizedBox(
+                //         width: 5,
+                //       ),
+                //     ],
+                //   ),
+                // ),
+                // const SizedBox(
+                //   width: 8,
+                // ),
                 Flexible(
                   child: SizedBox(
                     height: size.height * 0.24,
