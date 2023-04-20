@@ -2,7 +2,7 @@ import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:grocery/inner_screens/feeds_screen.dart';
-import 'package:grocery/inner_screens/on_sale_screen.dart';
+import 'package:grocery/inner_screens/popular_screen.dart';
 import 'package:grocery/provider/dark_theme_provider.dart';
 import 'package:grocery/services/utils.dart';
 import 'package:grocery/widgets/text_widget.dart';
@@ -11,7 +11,7 @@ import 'package:provider/provider.dart';
 import '../consts/contss.dart';
 import '../services/global_methods.dart';
 import '../widgets/feed_items.dart';
-import '../widgets/on_sale_widget.dart';
+import '../widgets/popular_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);

@@ -14,7 +14,7 @@ import 'package:provider/provider.dart';
 
 import 'consts/theme_data.dart';
 import 'inner_screens/feeds_screen.dart';
-import 'inner_screens/on_sale_screen.dart';
+import 'inner_screens/popular_screen.dart';
 import 'inner_screens/product_details.dart';
 
 void main() {
