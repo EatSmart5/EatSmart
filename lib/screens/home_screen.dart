@@ -75,17 +75,13 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Row(
                     children: [
                       TextWidget(
-                        text: 'On sale'.toUpperCase(),
+                        text: '🔥Popular🔥'.toUpperCase(),
                         color: Colors.red,
                         textSize: 22,
                         isTitle: true,
                       ),
                       const SizedBox(
                         width: 5,
-                      ),
-                      const Icon(
-                        IconlyLight.discount,
-                        color: Colors.red,
                       ),
                     ],
                   ),
