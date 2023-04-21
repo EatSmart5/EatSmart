@@ -63,7 +63,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: [
                   TextWidget(
                     text: '  Bestseller',
-                    color: Colors.red,
+                    color: Colors.black,
                     textSize: 22,
                     isTitle: true,
                   ),
