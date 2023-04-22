@@ -6,7 +6,7 @@ import 'package:grocery/inner_screens/product_details.dart';
 import 'package:grocery/widgets/heart_btn.dart';
 import 'package:grocery/widgets/text_widget.dart';
 
-import '../../inner_screens/on_sale_screen.dart';
+import '../../inner_screens/popular_screen.dart';
 import '../../services/global_methods.dart';
 import '../../services/utils.dart';
 

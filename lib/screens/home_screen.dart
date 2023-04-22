@@ -2,7 +2,7 @@ import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:grocery/inner_screens/feeds_screen.dart';
-import 'package:grocery/inner_screens/on_sale_screen.dart';
+import 'package:grocery/inner_screens/popular_screen.dart';
 import 'package:grocery/provider/dark_theme_provider.dart';
 import 'package:grocery/services/utils.dart';
 import 'package:grocery/widgets/text_widget.dart';
@@ -11,7 +11,7 @@ import 'package:provider/provider.dart';
 import '../consts/contss.dart';
 import '../services/global_methods.dart';
 import '../widgets/feed_items.dart';
-import '../widgets/on_sale_widget.dart';
+import '../widgets/popular_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -56,13 +56,24 @@ class _HomeScreenState extends State<HomeScreen> {
             TextButton(
               onPressed: () {
                 GlobalMethods.navigateTo(
-                    ctx: context, routeName: OnSaleScreen.routeName);
+                    ctx: context, routeName: PopularScreen.routeName);
               },
-              child: TextWidget(
-                text: 'View all',
-                maxLines: 1,
-                color: Colors.blue,
-                textSize: 20,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  TextWidget(
+                    text: '  Bestseller',
+                    color: Colors.black,
+                    textSize: 22,
+                    isTitle: true,
+                  ),
+                  TextWidget(
+                    text: 'View all',
+                    maxLines: 1,
+                    color: Colors.blue,
+                    textSize: 20,
+                  ),
+                ],
               ),
             ),
             const SizedBox(
@@ -70,29 +81,25 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             Row(
               children: [
-                RotatedBox(
-                  quarterTurns: -1,
-                  child: Row(
-                    children: [
-                      TextWidget(
-                        text: 'On sale'.toUpperCase(),
-                        color: Colors.red,
-                        textSize: 22,
-                        isTitle: true,
-                      ),
-                      const SizedBox(
-                        width: 5,
-                      ),
-                      const Icon(
-                        IconlyLight.discount,
-                        color: Colors.red,
-                      ),
-                    ],
-                  ),
-                ),
-                const SizedBox(
-                  width: 8,
-                ),
+                // RotatedBox(
+                //   quarterTurns: -1,
+                //   child: Row(
+                //     children: [
+                //       TextWidget(
+                //         text: '🔥Popular🔥'.toUpperCase(),
+                //         color: Colors.red,
+                //         textSize: 22,
+                //         isTitle: true,
+                //       ),
+                //       const SizedBox(
+                //         width: 5,
+                //       ),
+                //     ],
+                //   ),
+                // ),
+                // const SizedBox(
+                //   width: 8,
+                // ),
                 Flexible(
                   child: SizedBox(
                     height: size.height * 0.24,

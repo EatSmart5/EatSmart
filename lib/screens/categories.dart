@@ -4,7 +4,7 @@ import 'package:grocery/widgets/categories_widgets.dart';
 import 'package:grocery/widgets/text_widget.dart';
 
 class CategoriesScreen extends StatelessWidget {
-   CategoriesScreen({Key? key}) : super(key: key);
+  CategoriesScreen({Key? key}) : super(key: key);
 
   List<Color> gridColors = [
     const Color(0xff53B175),
@@ -15,35 +15,26 @@ class CategoriesScreen extends StatelessWidget {
     const Color(0xffB7DFF5),
   ];
 
-List<Map<String, dynamic>> catInfo = [
+  List<Map<String, dynamic>> catInfo = [
     {
-      'imgPath': 'assets/images/cat/fruits.png',
-      'catText': 'Fruits',
+      'imgPath': 'assets/images/cat/meal.png',
+      'catText': 'Meal',
     },
     {
-      'imgPath': 'assets/images/cat/veg.png',
-      'catText': 'Vegetables',
+      'imgPath': 'assets/images/cat/snacks.png',
+      'catText': 'Snacks',
     },
     {
-      'imgPath': 'assets/images/cat/Spinach.png',
-      'catText': 'Herbs',
+      'imgPath': 'assets/images/cat/beverages2.png',
+      'catText': 'Beverages',
     },
     {
-      'imgPath': 'assets/images/cat/nuts.png',
-      'catText': 'Nuts',
-    },
-    {
-      'imgPath': 'assets/images/cat/spices.png',
-      'catText': 'Spices',
-    },
-     {
-      'imgPath': 'assets/images/cat/grains.png',
-      'catText': 'Grains',
+      'imgPath': 'assets/images/cat/pakaged_items.png',
+      'catText': 'Packaged Items',
     },
   ];
   @override
   Widget build(BuildContext context) {
-
     final utils = Utils(context);
     Color color = utils.color;
     return Scaffold(
@@ -61,10 +52,10 @@ List<Map<String, dynamic>> catInfo = [
           padding: const EdgeInsets.all(8.0),
           child: GridView.count(
             crossAxisCount: 2,
-            childAspectRatio: 240 / 250,
+            childAspectRatio: 240 / 240,
             crossAxisSpacing: 10, // Vertical spacing
-            mainAxisSpacing: 10, // Horizontal spacing 
-            children: List.generate(6, (index) {
+            mainAxisSpacing: 10, // Horizontal spacing
+            children: List.generate(4, (index) {
               return CategoriesWidget(
                 catText: catInfo[index]['catText'],
                 imgPath: catInfo[index]['imgPath'],

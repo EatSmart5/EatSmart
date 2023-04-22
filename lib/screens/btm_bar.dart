@@ -19,7 +19,7 @@ class BottomBarScreen extends StatefulWidget {
 }
 
 class _BottomBarScreenState extends State<BottomBarScreen> {
-  int _selectedIndex = 2;
+  int _selectedIndex = 0;
   final List<Map<String, dynamic>> _pages = [
     {
       'page': const HomeScreen(),
@@ -85,9 +85,7 @@ class _BottomBarScreenState extends State<BottomBarScreen> {
                 position: badge.BadgePosition.topEnd(top: -7, end: -7),
                 badgeContent: FittedBox(
                     child: TextWidget(
-                        text: '1',
-                        color: Colors.white,
-                        textSize: 15)),
+                        text: '1', color: Colors.white, textSize: 15)),
                 child: Icon(
                     _selectedIndex == 2 ? IconlyBold.buy : IconlyLight.buy)),
             label: "Cart",

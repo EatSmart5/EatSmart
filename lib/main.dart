@@ -14,7 +14,7 @@ import 'package:provider/provider.dart';
 
 import 'consts/theme_data.dart';
 import 'inner_screens/feeds_screen.dart';
-import 'inner_screens/on_sale_screen.dart';
+import 'inner_screens/popular_screen.dart';
 import 'inner_screens/product_details.dart';
 
 void main() {
@@ -33,7 +33,7 @@ class _MyAppState extends State<MyApp> {
 
   void getCurrentAppTheme() async {
     themeChangeProvider.setDarkTheme =
-    await themeChangeProvider.darkThemePrefs.getTheme();
+        await themeChangeProvider.darkThemePrefs.getTheme();
   }
 
   @override
@@ -51,23 +51,24 @@ class _MyAppState extends State<MyApp> {
         })
       ],
       child:
-      Consumer<DarkThemeProvider>(builder: (context, themeProvider, child) {
+          Consumer<DarkThemeProvider>(builder: (context, themeProvider, child) {
         return MaterialApp(
             debugShowCheckedModeBanner: false,
             title: 'Flutter Demo',
             theme: Styles.themeData(themeProvider.getDarkTheme, context),
             home: const BottomBarScreen(),
             routes: {
-              OnSaleScreen.routeName: (ctx) => const OnSaleScreen(),
+              PopularScreen.routeName: (ctx) => const PopularScreen(),
               FeedsScreen.routeName: (ctx) => const FeedsScreen(),
               ProductDetails.routeName: (ctx) => const ProductDetails(),
               WishlistScreen.routeName: (ctx) => const WishlistScreen(),
               OrdersScreen.routeName: (ctx) => const OrdersScreen(),
               ViewedRecentlyScreen.routeName: (ctx) =>
-              const ViewedRecentlyScreen(),
+                  const ViewedRecentlyScreen(),
               RegisterScreen.routeName: (ctx) => const RegisterScreen(),
               LoginScreen.routeName: (ctx) => const LoginScreen(),
-              ForgetPasswordScreen.routeName: (ctx) => const ForgetPasswordScreen(),
+              ForgetPasswordScreen.routeName: (ctx) =>
+                  const ForgetPasswordScreen(),
             });
       }),
     );

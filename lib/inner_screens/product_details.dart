@@ -37,7 +37,7 @@ class _ProductDetailsState extends State<ProductDetails> {
           leading: InkWell(
             borderRadius: BorderRadius.circular(12),
             onTap: () =>
-            Navigator.canPop(context) ? Navigator.pop(context) : null,
+                Navigator.canPop(context) ? Navigator.pop(context) : null,
             child: Icon(
               IconlyLight.arrowLeft2,
               color: color,
@@ -50,7 +50,7 @@ class _ProductDetailsState extends State<ProductDetails> {
         Flexible(
           flex: 2,
           child: FancyShimmerImage(
-            imageUrl: 'https://i.ibb.co/F0s3FHQ/Apricots.png',
+            imageUrl: 'https://i.ibb.co/NN6WR4k/productimg.png',
             boxFit: BoxFit.scaleDown,
             width: size.width,
             // height: screenHeight * .4,
@@ -76,7 +76,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                     children: [
                       Flexible(
                         child: TextWidget(
-                          text: 'title',
+                          text: 'Title',
                           color: color,
                           textSize: 25,
                           isTitle: true,
@@ -93,13 +93,13 @@ class _ProductDetailsState extends State<ProductDetails> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       TextWidget(
-                        text: '\$2.59',
+                        text: '\₹15',
                         color: Colors.green,
                         textSize: 22,
                         isTitle: true,
                       ),
                       TextWidget(
-                        text: '/Kg',
+                        text: '/Pc',
                         color: color,
                         textSize: 12,
                         isTitle: false,
@@ -110,7 +110,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                       Visibility(
                         visible: true,
                         child: Text(
-                          '\$3.9',
+                          '\₹20',
                           style: TextStyle(
                               fontSize: 15,
                               color: color,
@@ -118,19 +118,19 @@ class _ProductDetailsState extends State<ProductDetails> {
                         ),
                       ),
                       const Spacer(),
-                      Container(
-                        padding: const EdgeInsets.symmetric(
-                            vertical: 4, horizontal: 8),
-                        decoration: BoxDecoration(
-                            color: const Color.fromRGBO(63, 200, 101, 1),
-                            borderRadius: BorderRadius.circular(5)),
-                        child: TextWidget(
-                          text: 'Free delivery',
-                          color: Colors.white,
-                          textSize: 20,
-                          isTitle: true,
-                        ),
-                      ),
+                      // Container(
+                      //   padding: const EdgeInsets.symmetric(
+                      //       vertical: 4, horizontal: 8),
+                      //   decoration: BoxDecoration(
+                      //       color: const Color.fromRGBO(63, 200, 101, 1),
+                      //       borderRadius: BorderRadius.circular(5)),
+                      //   child: TextWidget(
+                      //     text: 'Free delivery',
+                      //     color: Colors.white,
+                      //     textSize: 20,
+                      //     isTitle: true,
+                      //   ),
+                      // ),
                     ],
                   ),
                 ),
@@ -203,7 +203,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                 Container(
                   width: double.infinity,
                   padding:
-                  const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
+                      const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
                   decoration: BoxDecoration(
                     color: Theme.of(context).colorScheme.secondary,
                     borderRadius: const BorderRadius.only(
@@ -231,13 +231,13 @@ class _ProductDetailsState extends State<ProductDetails> {
                               child: Row(
                                 children: [
                                   TextWidget(
-                                    text: '\$2.59/',
+                                    text: '\₹15/',
                                     color: color,
                                     textSize: 20,
                                     isTitle: true,
                                   ),
                                   TextWidget(
-                                    text: '${_quantityTextController.text}Kg',
+                                    text: '${_quantityTextController.text}Pc',
                                     color: color,
                                     textSize: 16,
                                     isTitle: false,
