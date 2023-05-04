@@ -14,53 +14,53 @@ class CartScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final Color color = Utils(context).color;
     Size size = Utils(context).getScreenSize;
-    bool _isEmpty = true;
+    bool _isEmpty = false;
     return _isEmpty
         ? const EmptyScreen(
-            title: 'Building Cart',
-            subtitle: 'Cart is under construction',
-            buttonText: 'Try again',
-            imagePath: 'assets/images/UserScreen.png',
-          )
+      title: 'Your cart is empty',
+      subtitle: 'Add something and make me happy :)',
+      buttonText: 'Shop now',
+      imagePath: 'assets/images/cart.png',
+    )
         : Scaffold(
-            appBar: AppBar(
-                elevation: 0,
-                backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-                title: TextWidget(
-                  text: 'Cart (2)',
-                  color: color,
-                  isTitle: true,
-                  textSize: 22,
-                ),
-                actions: [
-                  IconButton(
-                    onPressed: () {
-                      GlobalMethods.warningDialog(
-                          title: 'Empty your cart?',
-                          subtitle: 'Are you sure?',
-                          fct: () {},
-                          context: context);
-                    },
-                    icon: Icon(
-                      IconlyBroken.delete,
-                      color: color,
-                    ),
-                  ),
-                ]),
-            body: Column(
-              children: [
-                _checkout(ctx: context),
-                Expanded(
-                  child: ListView.builder(
-                    itemCount: 10,
-                    itemBuilder: (ctx, index) {
-                      return CartWidget();
-                    },
-                  ),
-                ),
-              ],
+      appBar: AppBar(
+          elevation: 0,
+          backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+          title: TextWidget(
+            text: 'Cart (2)',
+            color: color,
+            isTitle: true,
+            textSize: 22,
+          ),
+          actions: [
+            IconButton(
+              onPressed: () {
+                GlobalMethods.warningDialog(
+                    title: 'Empty your cart?',
+                    subtitle: 'Are you sure?',
+                    fct: () {},
+                    context: context);
+              },
+              icon: Icon(
+                IconlyBroken.delete,
+                color: color,
+              ),
             ),
-          );
+          ]),
+      body: Column(
+        children: [
+          _checkout(ctx: context),
+          Expanded(
+            child: ListView.builder(
+              itemCount: 10,
+              itemBuilder: (ctx, index) {
+                return CartWidget();
+              },
+            ),
+          ),
+        ],
+      ),
+    );
   }
 
   Widget _checkout({required BuildContext ctx}) {
@@ -92,7 +92,7 @@ class CartScreen extends StatelessWidget {
           const Spacer(),
           FittedBox(
             child: TextWidget(
-              text: 'Total: \$0.259',
+              text: 'Total: \₹${100}',
               color: color,
               textSize: 18,
               isTitle: true,

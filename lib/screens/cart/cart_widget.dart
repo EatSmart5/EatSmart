@@ -59,7 +59,7 @@ class _CartWidgetState extends State<CartWidget> {
                         borderRadius: BorderRadius.circular(12.0),
                       ),
                       child: FancyShimmerImage(
-                        imageUrl: 'https://i.ibb.co/F0s3FHQ/Apricots.png',
+                        imageUrl: 'https://www.cubesnjuliennes.com/wp-content/uploads/2020/08/Best-Indian-Punjabi-Samosa-Recipe.jpg',
                         boxFit: BoxFit.fill,
                       ),
                     ),
@@ -158,7 +158,7 @@ class _CartWidgetState extends State<CartWidget> {
                           ),
                           const HeartBTN(),
                           TextWidget(
-                            text: '\$0.29',
+                            text: '\₹${15}',
                             color: color,
                             textSize: 18,
                             maxLines: 1,
