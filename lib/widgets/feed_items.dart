@@ -47,11 +47,13 @@ class _FeedsWidgetState extends State<FeedsWidget> {
           borderRadius: BorderRadius.circular(12),
           child: Column(children: [
             FancyShimmerImage(
+
               imageUrl:
                   'https://www.cubesnjuliennes.com/wp-content/uploads/2020/08/Best-Indian-Punjabi-Samosa-Recipe.jpg',
               height: size.width * 0.21,
               width: size.width * 0.2,
               boxFit: BoxFit.fill,
+              boxDecoration: BoxDecoration(borderRadius: BorderRadius.circular(30.0),),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -65,12 +67,17 @@ class _FeedsWidgetState extends State<FeedsWidget> {
                     isTitle: true,
                   ),
                   const HeartBTN(),
+
                 ],
+
               ),
+
             ),
+
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Row(
+
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Flexible(
@@ -92,7 +99,7 @@ class _FeedsWidgetState extends State<FeedsWidget> {
                           flex: 3,
                           child: FittedBox(
                             child: TextWidget(
-                              text: 'PC',
+                              text: '1PC',
                               color: color,
                               textSize: 20,
                               isTitle: true,
@@ -102,25 +109,7 @@ class _FeedsWidgetState extends State<FeedsWidget> {
                         const SizedBox(
                           width: 6,
                         ),
-                        Flexible(
-                            flex: 2,
-                            // TextField can be used also instead of the textFormField
-                            child: TextFormField(
-                              controller: _quantityTextController,
-                              key: const ValueKey('10'),
-                              style: TextStyle(color: color, fontSize: 18),
-                              keyboardType: TextInputType.number,
-                              maxLines: 1,
-                              enabled: true,
-                              onChanged: (valueee) {
-                                setState(() {});
-                              },
-                              inputFormatters: [
-                                FilteringTextInputFormatter.allow(
-                                  RegExp('[0-9.]'),
-                                ),
-                              ],
-                            ))
+
                       ],
                     ),
                   )

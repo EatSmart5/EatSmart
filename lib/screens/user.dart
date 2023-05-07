@@ -39,7 +39,7 @@ class _UserScreenState extends State<UserScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const SizedBox(
-                  height: 15,
+                  height: 50,
                 ),
                 RichText(
                   text: TextSpan(
