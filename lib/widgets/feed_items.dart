@@ -49,7 +49,7 @@ class _FeedsWidgetState extends State<FeedsWidget> {
             FancyShimmerImage(
 
               imageUrl:
-                  'https://www.cubesnjuliennes.com/wp-content/uploads/2020/08/Best-Indian-Punjabi-Samosa-Recipe.jpg',
+                  'https://i.ibb.co/kcXcBkT/samosa2.png',
               height: size.width * 0.21,
               width: size.width * 0.2,
               boxFit: BoxFit.fill,

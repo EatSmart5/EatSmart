@@ -44,7 +44,7 @@ class _OnSaleWidgetState extends State<OnSaleWidget> {
                     children: [
                       FancyShimmerImage(
                         imageUrl:
-                            'https://www.cubesnjuliennes.com/wp-content/uploads/2020/08/Best-Indian-Punjabi-Samosa-Recipe.jpg',
+                            'https://i.ibb.co/kcXcBkT/samosa2.png',
                         height: size.width * 0.22,
                         width: size.width * 0.22,
                         boxFit: BoxFit.fill,
